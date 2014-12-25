@@ -1,0 +1,94 @@
+ul,li  {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.breadcrumb{
+	padding-left:0;	
+	background:#fff;
+}
+
+.active{
+	font-size:20px;
+}
+
+.dropdown-menu > li > input {
+	width:70%;
+	float:left;
+}
+
+.col-sm-2 {
+   	width:12%;
+} 
+
+.col-sm-offset-2 {
+	margin-left: 0px;
+}
+
+.btn {
+	margin-right:10px;
+}
+
+.btn .caret {
+	margin-left: 46px;
+}
+
+.form-group .col-sm-10 .form-control {
+	width:294px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.map{
+	width:340px;
+	height:199px;
+	background-color:#D7D7D7;
+	border:1px solid #BABABA;
+	margin-left:15px;
+}
+
+.footer_button .btn{
+	margin-right:2%;
+	margin-top:2%;
+}
+
+#chose{
+    display: block;
+}
+.icon{
+	margin-top:5px;
+	margin-left: 15px;
+}
+
+span.icon{
+    position: absolute;
+    top: 108px;
+    left: 457px;
+}
+
+.shop{	
+    position: absolute;
+    top: 130px;
+    left: 334px;
+    z-index:2;
+	width:161px;
+	display:none;
+	border:1px #ccc solid
+}
+.shop  select {
+	width: 160px;
+} 
+input.form-control {
+	width:162px;
+}
+
+.shop input {
+	border:1px solid #BABABA;
+	height:28px;
+	width:161px;
+	border-radius: 3px;
+	color: rgb(85, 85, 85);
+}

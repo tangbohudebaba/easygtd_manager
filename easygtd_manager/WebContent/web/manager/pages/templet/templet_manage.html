@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>模板管理</title>	
+		<link href="css/user/all_user.css" rel="stylesheet" />
+	</head>
+	<!-- 列表模版 -->
+	<script id="load_templet_list_temp" type="text/html">
+		<% 
+		var list=result?result:events;
+		for (var i=0;i<list.length;i++) {%>
+			<tr>
+				<td><label><input type='checkbox' name='templetID'></label></td>
+				<td><a href='#' onclick="to_show_templet('<%=list[i].id%>','<%=list[i].title%>');"><%=list[i].title%></a></td>
+				<td><%=list[i].id%></td>
+				<td>模板类型</td>
+				<td><%=list[i].seat?list[i].seat:""%></td>
+				<td><%=list[i].content%></td>
+				<td><%=list[i].intro?list[i].intro:""%></td>
+				<td><%=formatDate(list[i].created_at)%></td>
+			</tr>
+		<%}%>	
+	</script>
+	<script>
+		$(function (){
+			load_templet_list(1);
+		});	
+	</script>
+	<body>
+		<h3>模板管理</h3>
+		<div class="search" style="margin-top:50px;">
+			<button type="button" class="check_all active" onclick="to_other_page('pages/templet/templet_manage.html');">所有模版（3）</button>
+			<button type="button" class="check_all" onclick="to_other_page('pages/templet/templet_type.html');">模版类型（3）</button>
+			<div class="input-group">
+				<input type="text" class="form-control" name="search_value">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="search_templet(1);">搜索</button>
+				</span>
+			</div>			
+		</div>
+		<div class="row"></div>
+		<div class="Bulk Operations">
+			<button type="button" class="btn btn-primary btn-sm" onClick="to_other_page('pages/templet/create_templet.html')">添加</button>	
+			<div id="templet_manage_page_div" style="text-align:right;padding-bottom: 10px;"></div>
+		</div>
+		<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th><label><input type="checkbox" onclick="checkBox(this,'templetID')"></label></th>
+					<th>模板名</th>
+					<th>模板编号</th>
+					<th>模板类型</th>
+					<th>人数限制</th>
+					<th>场地建议</th>
+					<th>简介</th>
+					<th>创建时间</th>
+				</tr>
+			</thead>
+			<tbody id="templet_manage_tab"></tbody>		
+		</table>
+	</body>
+</html>

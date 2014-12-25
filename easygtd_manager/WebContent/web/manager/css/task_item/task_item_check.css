@@ -1,0 +1,57 @@
+ul,li  {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.breadcrumb{
+	padding-left:0;
+	background:none;
+}
+
+.active {
+	font-size:20px;	
+}
+
+.col-sm-10{
+	padding-top:7px;
+}
+
+.form-group {
+	margin-top:18px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.col-sm-2 {
+	width: 10.5%;
+}
+
+.col-sm-offset-2 {
+	margin-left: 0;
+}
+
+.pull-left {
+	margin-top:35px;
+}
+
+.people-left{
+	float:left;
+	width:10.5%;
+	font-weight: bold;
+}
+
+.table-right{
+	width:60%;
+	float:left;
+}
+
+.btn{
+	margin-right:2%;
+}
+
+.btn:nth-child(3){
+	margin-left:1.6%;
+}

@@ -1,0 +1,69 @@
+﻿ <!DOCTYPE html>
+<html>
+	<head>
+		<title>内部用户</title>		
+		<link href="css/user/all_user.css" rel="stylesheet" />
+		<!-- 列表模版 -->
+		<script id="user_list_temp" type="text/html">
+			<%
+			var list=result?result:users;
+			for (var i=0;i<list.length;i++) {%>
+				<tr>
+					<td><label><input type='checkbox' name='userID' userID='<%=list[i].id%>'></label></td>
+					<td><a href='#' onclick="to_show_user_info('all','<%=list[i].id%>','<%=list[i].name%>');"><%=list[i].nickname%></a></td>
+					<td><%=list[i].name%></td>
+					<td><%=list[i].gender?list[i].gender:""%></td>
+					<td><%=list[i].employer_name?list[i].employer_name:""%></td>
+					<td><%=list[i].phone_number%></td>
+					<td>未设置</td>
+					<td>暂无简介</td>
+					<td><%=formatDate(list[i].created_at)%></td>
+				</tr>
+			<%}%>	
+		</script>
+		<SCRIPT>
+			$(function (){
+				//加载列表
+				user_list(1);		
+			});	
+		</SCRIPT>
+	</head>
+	<body>
+		<h3>用户管理</h3>
+		<div class="search" style="margin-top:50px;">
+			<button type="button" class="check_all active" onclick="to_other_page('pages/user/all_user.html')">内部用户（1）</button>
+			<button type="button" class="check_all" onclick="to_other_page('pages/common_user/common_all_user.html');">普通用户（2）</button>
+			<button type="button" class="check_all" onclick="to_other_page('pages/business_admin/business_all_admin.html');">商户管理员（1）</button>
+			<div class="input-group">
+				<input type="text" class="form-control" name="search_value">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="search_user(1);">搜索</button>
+				</span>
+			</div>			
+		</div>
+		<div class="row"></div>
+		<div class="Bulk Operations" style="margin-top:15px;">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary btn-sm" style="float:left;" onClick="to_other_page('pages/user/add_user.html')">添加</button>	
+			</div>
+			<div id="all_user_page_div" style="text-align:right;padding-bottom: 10px;"></div>
+		</div>
+		<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th><label><input type="checkbox" onclick="checkBox(this,'userID')"></label></th>
+					<th>用户名</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>人员类型</th>
+					<th>手机</th>
+					<th>服务区域</th>
+					<th>简介</th>
+					<th>创建时间</th>
+				</tr>
+			</thead>
+			<tbody id="all_user_list_tb">
+			</tbody>		
+		</table>
+	</body>
+</html>

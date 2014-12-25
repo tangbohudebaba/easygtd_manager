@@ -1,0 +1,61 @@
+ul,li  {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.breadcrumb{
+	padding-left:0;
+	background:none;
+}
+.search > .check_all {
+	background:#FFFFFF;
+	border:0;
+	color:#000;
+	margin-right: 50px;
+}
+.search > .active {
+	border-bottom: 2px solid #0099FF;
+}
+.breadcrumb .active {
+	font-size:20px;	
+}
+
+.col-sm-10{
+	padding-top:7px;
+}
+
+.form-group {
+	margin-top:18px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.col-sm-2 {
+	width: 10.5%;
+}
+
+.col-sm-offset-2 {
+	margin-left: 0;
+}
+
+.pull-left {
+	margin-top:35px;
+}
+
+.people-left{
+	float:left;
+	width:10.5%;
+	font-weight: bold;
+}
+
+.table-right{
+	width:60%;
+	float:left;
+}
+
+.btn{
+	margin-right:2%;
+}

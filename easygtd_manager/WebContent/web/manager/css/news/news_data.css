@@ -1,0 +1,47 @@
+.form-horizontal {
+	margin-top:-20px;
+}
+
+.col-sm-2 {
+    width:11.5%;
+} 
+
+.col-sm-5{
+	margin-top:7px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.form-group .map {
+	width:340px;
+	height:199px;
+	background-color:#D7D7D7;
+	border:1px solid #BABABA;
+	margin-left:15px;	
+}
+
+.breadcrumb {
+	padding-left:0;	
+	background:#fff;
+}
+
+.active {
+	font-size:20px;
+}
+
+.col-sm-4 {
+	margin-top:20px;
+	width: 39.2%;
+}
+
+.form-control {
+	color:#999999;
+	margin-left: -14px;
+}
+
+.btn {
+	margin-right:20px;
+	margin-top:30px;
+}

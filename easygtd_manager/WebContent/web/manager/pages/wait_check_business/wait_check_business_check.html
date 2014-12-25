@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>审核商户</title>		
+		<link href="css/business_entity/business_entity_check.css" rel="stylesheet" />
+	</head>
+	<SCRIPT>
+		//返回
+		function to_back() {
+			$(".container_right").load('pages/wait_check_business/wait_check_business_all.html'); 	
+		}
+		//错误数据
+		function show_error_data(type){	
+			if(type == 1){
+				$("#error_msg").removeClass("hide");
+			}else{
+				$("#error_msg").addClass("hide");
+			}
+		}
+	</SCRIPT>
+	<body>
+		<ol class="breadcrumb">
+			<li>全部商户</li>
+			<li>待审核</li>
+			<li class="active">大同刀削</li>
+		</ol>
+		<button type="button" class="btn btn-primary" onclick="to_back();">返回</button>
+		<button type="button" class="btn btn-primary">删除</button>
+		<button type="button" class="btn btn-primary">审核通过</button>
+		<button type="button" class="btn btn-primary" onclick='show_error_data(1);'>错误数据</button>
+		<button type="button" class="btn btn-primary hide">等待修改</button>
+		<input type="hidden" name="id">
+		<input type="hidden" name="business_name">
+		<input type="hidden" name="business_category_id">
+		<div class="clearfix"></div>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">分类</label>
+				<div class="col-sm-5" id="categoryDIV">
+					餐饮
+				</div>
+            </div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">店名</label>
+				<div class="col-sm-5" id="nameDIV">
+					大同刀削
+				</div>
+            </div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">地址</label>
+				<div class="col-sm-5" id="addressDIV">
+					山西大同
+				</div>
+            </div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">联系电话</label>
+				<div class="col-sm-5" id="phoneDIV">
+					12345
+				</div>
+            </div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">商户地标</label>
+				<div class="col-sm-5 map">
+				</div>
+			</div>
+        </form> 
+		<!-- 输入错误原因 -->
+		<div id="error_msg" class="error_msg hide">
+			<div class="content">
+				修改意见
+				<a href="#" onclick='show_error_data(2);'>X</a>
+			</div>
+			<textarea name="content_msg"></textarea>
+			<div class="but">
+				<button type="button" class="btn btn-primary" onclick='show_error_data(2);'>取消</button>
+				<button type="button" class="btn btn-primary">确定</button>
+			</div>
+		</div>		
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>全部商户类型</title>		
+		<link href="css/business_entity/business_entity_own.css" rel="stylesheet" />
+		<!-- 商户类型列表 -->
+		<script id="business_type_list_show" type="text/html">
+			<% for (var i = 0;i<business_categories.length;i++) {%>
+			 <tr>
+				<td><label><input type='checkbox' businessID='<%=business_categories[i].id%>' name='subBox'></label></td>
+				<td><a href='#' onclick="to_business_category_check('<%=business_categories[i].id%>');" >
+				<%=business_categories[i].name%></a></td>
+				<td><%=business_categories[i].count_of_publicly_visible_business_entities%></td>
+				<td><%=business_categories[i].count_of_publicly_invisible_business_entities%></td>
+				<td>无数据</td>
+			</tr>
+			<%}%>
+		</script>
+
+		<!-- 搜索商户类型 -->
+		<script id="search_business_type_show" type="text/html">
+				<%for ( var i = 0; i < result.length; i++) {%>
+					<tr>
+					<td><label><input type='checkbox' businessID='<%=result[i].id%>' name='subBox'></label></td>
+					<td><a href='#' onclick="to_business_category_check('<%=result[i].id%>');" >
+					<%=result[i].name%>
+					</a></td>
+					<td>无数据</td>
+					<td>无数据</td>
+					<td>无数据</td>
+				</tr>
+			<%}%>
+		</script>
+
+		<SCRIPT>
+			//显示列表
+			$(function(){
+				 business_entity_own(1);
+			});
+			//添加商户类型
+			function add_business_type(){
+				$(".container_right").load('pages/business_category/add_business_type.html');
+			};
+		</SCRIPT>
+	</head>
+	<body>
+		<h3>全部商户类型</h3>
+		<button type="button" class="btn btn-xs" onClick="add_business_type()">添加类型</button>	
+		<div class="search">
+			<button type="button" class="check_all"  name="checkAllBut"></button>
+			<div class="input-group">
+				<input type="text" class="form-control" name="search_business"/>
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="search_business_type(1)">搜索</button>
+				</span>
+			</div>
+		</div>	
+		<div class="row"></div>
+		<div class="Bulk Operations">	
+			<button type="button" class="btn btn-primary btn-sm" onClick="delete__business_type()">删除</button>	
+			<div id="business_entity_own_div" style="text-align:right;padding-bottom: 10px;"></div>
+		</div>
+		<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th style="text-align:center"><input type="checkbox" onClick="checkBox(this,'subBox')">
+					</th>			
+					<th>类型名</th>
+					<th>已发布商户数量</th>
+					<th>未发布商户数量</th>
+					<th>创建时间</th>
+				</tr>
+			</thead>		
+			<tbody id="business_entity_own_tb">
+				
+			</tbody>
+		</table>
+	</body>
+</html>

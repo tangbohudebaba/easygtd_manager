@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>活动管理</title>	
+		<link href="css/user/all_user.css" rel="stylesheet" />	
+		<SCRIPT>
+			$(function (){
+				activity_list(1);
+			});
+		</SCRIPT>
+	</head>
+	<body>
+		<h3>活动管理</h3>
+		<div class="search" style="margin-top:50px;">
+			<button type="button" class="check_all active change_tab">全部活动 </button>
+			<button type="button" class="check_all">正在进行 </button>
+			<button type="button" class="check_all">已完成 </button>
+			<button type="button" class="check_all">等待审核 </button>
+			<div class="input-group">
+				<input type="text" class="form-control" name="search_activity_name">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="search_activity(1);">搜索</button>
+				</span>
+			</div>			
+		</div>
+		<div class="row"></div>
+		<div class="Bulk Operations">
+			<div id="all_activity_page_div" style="text-align:right;padding-top:10px;height:50px"></div>
+		</div>
+		<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th style="text-align:center"><input type="checkbox" onClick="checkBox(this,'activity_name')">
+					</th>
+					<th>活动名</th>
+					<th>组织人</th>
+					<th>所在小区</th>
+					<th>活动地点</th>
+					<th>人数上限</th>
+					<th>创建时间</th>
+					<th>使用模板</th>
+				</tr>
+			</thead>
+			<tbody id="all_activity_list_tb">
+				
+			</tbody>		
+		</table>
+	</body>
+</html>

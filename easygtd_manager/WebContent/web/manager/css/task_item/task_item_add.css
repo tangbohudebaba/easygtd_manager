@@ -1,0 +1,210 @@
+ul,li  {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+img {
+	width:20px;
+	height:20px;
+}
+
+.breadcrumb{
+	padding-left:0;
+	background:none;
+}
+
+.active {
+	font-size:20px;	
+}
+
+.radio{
+	padding-left:150px;
+}
+
+.btns{
+	padding:0;
+}
+
+.input-append .form-control, .form-control {
+	border: 1px solid #B2B2B2;
+	border-top-color: #9F9F9F;
+	border-top-style: solid;
+	background-color:#fff;
+}
+
+.divinclude
+{
+	position:relative;
+	margin-bottom:15px;
+	z-index:1;
+}
+.form-group .col-sm-10 .form-control {
+	width:294px;
+	border-color:#B2B2B2;
+}
+
+.form-group .col-sm-offset-2 button {
+	width:145px;
+	height:46px;
+	border-radius: 30px;
+	background-color:#428BCA;
+	color:#ffffff;
+	font-size:14px;
+	font-weight:bold;
+	margin-top:66px;
+}
+
+.list_left,.list_right{
+	border:1px solid #656565;
+	width:220px;
+}
+
+.list_left {
+	margin-top:14px;
+	overflow:scroll;
+	height:370px;
+	width:220px; 
+}
+
+.list_left li,.list_right li{
+	height:40px;
+	line-height:40px;
+	padding-left:20px;
+	border-top:1px solid #b2b2b2;
+}
+
+.list_left li:nth-child(1),.list_right li:nth-child(1) {
+	border-top:0;
+}
+
+.list_left li a,.list_right li a {
+	color:#808080;
+}
+
+.list_left li span {
+	width:20px;
+	height:20px;
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+
+.list_right  li span {
+	width:20px;
+	height:20px;
+	display:block;
+	float:right;
+	margin-right:17px
+}
+
+.pager{
+	width:50px;
+	height:100px;
+	margin:120px 50px 0;
+}
+
+.pager li a{
+	margin-bottom:50px;
+}
+
+.pager li > a {
+	display: inline-block;
+	padding: 5px 15px;
+	color:#4F4F4F;
+	background-color: #EEEEEE;
+	border: 1px solid #CECECE;
+	border-radius: 4px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.col-sm-2 {
+	width: 10.5%;
+}
+
+.col-sm-offset-2 {
+	margin-left: 0;
+}
+
+.pull-left {
+	margin-top:35px;
+}
+
+.form-control {
+	width:100px;
+}
+
+.input-group {
+	width:175px;
+	float:left;
+	border-radius: 2px;
+}
+
+.input-group input {
+	background:#F1F1F1;
+	width:175px;
+	height:25px;
+	font-size:10px;
+	color:#b4b4b4;	
+}
+
+.pull-left button{
+	width:40px;
+	height:25px;
+	background:#30B4D5;
+	border:1px solid #22859E;
+	border-radius: 2px;
+	margin-left:5px;
+}
+
+.glyphicon {
+	color:#b1b1b1;
+	position: absolute;
+	top: 12px;
+	
+}
+#treeDemo2Ul .userlist
+{
+ width:30px !important;
+ line-height:40px;
+}
+#treeDemo2Ul .glyphicon{
+	width:100%;
+	position:static;
+}
+.addlist
+{ 
+left: 330px;
+ width:15px;  
+ height:15px; 
+}
+.deletelist
+{ 
+left: 300px;
+}
+.pull-left > .check_all {
+	width: 220px;
+	height: 25px;
+	background:#EFEFEF;
+	border:1px solid #656565;
+	color:#4F4F4F;
+	border-top:0;
+	font-size:12px;
+	line-height:20px;
+	border-radius: 0px;
+	margin:0px;
+}
+
+.btn{
+	margin-right:2%;
+	margin-top:2%;
+}
+
+span.add-on{
+	position: absolute;
+	top: 24%;
+	left: 29%;
+}

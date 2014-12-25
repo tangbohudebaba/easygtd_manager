@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>关注的用户</title>	
+		<link href="css/user/check_user.css" rel="stylesheet" />
+		<link href="css/user/all_user.css" rel="stylesheet" />	
+		<link href="css/add_activity/detail_activity.css" rel="stylesheet" />	
+	</head>
+	<body>
+		<ol class="breadcrumb">
+			<li>活动</li>
+			<li class="active">自己获取</li>
+		</ol>
+
+		<div class="search">
+			<button type="button" class="check_all" onClick="to_detail()">基本资料</button>
+			<button type="button" class="check_all" onClick="to_partake()">参与的用户
+			</button>	
+			<button type="button" class="check_all active" onClick="to_concern()">关注的的用户
+			</button>
+			<input type="hidden" name="activity_detail_id">
+			<input type="hidden" name="type">
+			<div class="input-group">
+				<input type="text" class="form-control" name="search_value">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="search_user('all_user_list_tb','all_user_page_div');">搜索</button>
+				</span>
+			</div>			
+		</div>
+		<div class="row"></div>
+		<div class="Bulk Operations">
+			<button type="button" class="btn btn-primary btn-sm" onClick="checkAll()">全选</button>	
+			<div id="all_user_page_div" style="text-align:right;padding-bottom: 10px;"></div>
+		</div>
+		<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th></th>
+					<th>用户名</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>手机</th>
+					<th>人员类型</th>
+					<th>关注日期</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+			</tbody>		
+		</table>
+	</body>
+</html>

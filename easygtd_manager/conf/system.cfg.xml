@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<site>
+		<secret>abcdefg</secret>
+		<proxiedContextPath>/meap</proxiedContextPath>
+	</site>
+	<!-- 本地测试 -->
+	<httpRootPath>http://192.168.60.28:8080/easygtd/</httpRootPath> 
+	<!-- 线上 -->
+<!-- 	<httpRootPath>http://123.57.46.100/easygtd/</httpRootPath> -->
+	<push>
+		<deployStatus>2</deployStatus><!-- 部署状态,1: Developer 2:Production -->
+		<p12Patch>E:\Easy GTD\Certificates.p12</p12Patch>
+		<p12PatchProduction>E:\Easy GTD\Certificates_production.p12</p12PatchProduction>
+		<p12Password>123456</p12Password>
+	</push>
+	
+</system>

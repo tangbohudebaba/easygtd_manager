@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>添加新商户</title>	
+		<link href="css/business_entity/business_entity_add.css" rel="stylesheet" />
+		<script type="text/javascript">
+	        $(function(){
+	            $(".icon").click(function(){
+	                $(".shop").show();
+	                return false;//关键是这里，阻止冒泡
+	            });
+	            $(".shop").click(function(){
+	                return false;
+	            });
+	            $(document).click(function(){
+	                $(".shop").hide();
+	            });
+				//加载商户分类
+				business_category_list('business_category_list_but');
+				//选择分类
+				$("#business_category_list_but").change(function (){
+					var tex=$('#business_category_list_but option:selected').text();//选中的文本
+					var val=$('#business_category_list_but option:selected').val();//选中的值
+					$("[name='business_category_name']").val(tex);
+					$("[name='business_category_id']").val(val);
+					$(".shop").hide();
+				});
+	        });	
+	    </script>
+	</head>
+	<body>		
+		<ol class="breadcrumb">
+			<li>全部商户</li>
+			<li class="active">添加商户</li>
+		</ol>
+		<form class="form-horizontal" role="form">
+		<input type="hidden" name="type" value="all"><!--区分是查询的所有的还是关注的 别删了 -->
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label" style="margin-right:15px;">
+					选择一个分类
+				</label>
+			    <input type="text" class="icon form-control"  name="business_category_name" autocomplete="off" placeholder="选择分类"/> 
+			    <input type="hidden" name="business_category_id" />
+				<span type="text" class="icon caret"></span>
+			    <div class="shop">
+			        <input type="text" name="seach_value" id="chose" placeholder="搜索" onkeyup="search_Business_category();"  onfocus="if(this.value=='输入关键词，回车搜索全国设计素材资源'){this.value='';}"/>   
+			        <select size="5" id="business_category_list_but" ></select>
+			    </div>	
+			</div> 	
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">
+					店名
+				</label>
+				<div class="col-sm-10">
+				    <input type="text" class="form-control" id="inputEmail3" name="name" placeholder="请输入正确店名" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					地址
+				</label>
+				<div class="col-sm-10">
+				    <input type="text" class="form-control" id="inputPassword3" name="address" placeholder="请输入商户店址" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					联系电话
+				</label>
+				<div class="col-sm-10">
+				    <input type="text" class="form-control" id="inputPassword3" name="phone" placeholder="请输入正确的联系电话" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					简介
+				</label>
+				<div class="col-sm-10">
+				    <input type="text" class="form-control" id="inputPassword3" name="intro" placeholder="请输入商户简介" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">为小区创建地标</label>
+				<div class="col-sm-5 map">
+				</div>
+			</div>
+			<div class="footer_button">
+				<button type="button" class="btn btn-primary" onClick="to_other_page('pages/business_entity/business_entity_all.html');">取消</button>
+				<button type="button" class="btn btn-primary" onclick="submit_business_entity();">提交</button>
+			</div> 
+		</form>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+h3{
+	float:left;
+	margin-top:15px;
+	margin-right:20px;	
+}
+
+.input-group{
+	width:50%;
+	float:right;
+}
+
+.search > .check_all {
+	background:#FFFFFF;
+	border:0;
+	color:#000;
+}
+
+.btn-sm {
+	margin-bottom:20px;
+}
+
+.select {
+	width:16%;
+	margin:10px 0 20px 0;
+}
+
+#chose{
+    display: block;
+}
+
+#uiSel{
+    width: 136px;
+}
+
+input.form-control {
+	width:140px;
+	height:34px;
+}
+

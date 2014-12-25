@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>首页</title>		
+		<link href="../common/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="../common/bootstrap/css/datepicker.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet"/>
+		<link href="css/paginate.css" rel="stylesheet" />
+		<script src="../common/jquery.js"></script>
+		<script src="../common/template.js"></script><!-- js模版 -->
+		<script src="../common/bootstrap/js/bootstrap.min.js"></script>	
+		<script src="../common/bootstrap/js/bootstrap-datepicker.js"></script>
+	
+		<script src="js/index.js"></script>
+		<script src="js/changeTab.js"></script>
+		<script src="js/task/index.js"></script><!-- 待办列表 -->
+		<script src="js/business_entity/index.js"></script><!-- 商户 -->
+		<script src="js/business_category/index.js"></script><!-- 商户类型 -->
+		<script src="js/community_center/index.js"></script><!-- 小区 -->
+		<script src="js/task_item/index.js"></script><!-- 待办 -->
+		<script src="js/user/index.js"></script><!-- 用户 -->
+		<script src="js/activity/index.js"></script><!-- 活动 -->
+		<script src="js/user_attention/index.js"></script><!-- 用户关注 -->
+		<script src="js/templet/index.js"></script><!-- 模版 -->
+		<script src="js/attend_activity/index.js"></script><!-- 参与的活动 -->
+		<script src="js/paginate.js"></script><!--分页JS-->
+	</head>
+	<body>		
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">			
+			<ul class="nav navbar-nav navbar-header">
+				<li>社区灵通数据管理平台</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>您好，Pandal</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"> Action</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="javascript:;">Action</a></li>
+						<li><a href="javascript:;">Another action</a></li>
+						<li><a href="javascript:;">Something else here</a></li>
+						<li><a href="javascript:;">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>	
+		<div class="container">
+			<div class="container_left">
+				<ul class="nav nav-stacked">
+					<li class="shite_space"></li>
+					<li class="title">待办管理</li>
+					<li url='pages/task_item/task_item_add.html'><a href="javascript:;">添加待办</a></li>
+					<li url='pages/task/all_pending.html'><a href="javascript:;">全部待办</a></li>
+					<li class="title">用户管理</li>
+					<li url='pages/user/add_user.html'><a href="javascript:;">添加用户</a></li>
+					<li url='pages/user/all_user.html'><a href="javascript:;">全部用户</a></li>
+					<li url='pages/common_user/common_all_user.html'><a href="javascript:;">普通用户</a></li>
+					<li url='pages/attend_activity/attend_activity_all.html'><a href="javascript:;">参与的活动</a></li>
+					<li url='pages/user_attention/user_attention_all.html'><a href="javascript:;">用户关注</a></li>
+					<li url='pages/business_admin/business_all_admin.html'><a href="javascript:;">商户管理员</a></li>
+					<li class="title">商户类型管理</li>
+					<li url='pages/business_category/add_business_type.html'><a href="javascript:;">添加商户类型</a></li>
+					<li url='pages/business_entity/business_entity_own.html'><a href="javascript:;">全部商户类型</a></li>
+					<li class="title">商户管理</li>
+					<li url='pages/business_entity/business_entity_add.html'><a href="javascript:;">添加商户</a></li>
+					<li url='pages/business_entity/business_entity_all.html'><a href="javascript:;">全部商户</a></li>
+					<li url='pages/wait_check_business/wait_check_business_all.html'><a href="javascript:;">待审核商户</a></li>
+					<li url='pages/error_data/error_data_all.html'><a href="javascript:;">数据变动</a></li>
+					<!-- <li><a href="#">已发布</a></li>
+					<li><a href="#">待审核</a></li>
+					<li><a href="#">草稿箱</a></li> -->
+					<li class="title">小区管理</li>
+					<li url='pages/community_center/community_center_add.html'><a href="javascript:;">添加小区</a></li>
+					<li url='pages/community_center/community_center_all.html'><a href="javascript:;">全部小区</a></li>
+					<!-- <li><a href="#">已发布</a></li>
+					<li><a href="#">待审核</a></li>	 -->
+					<li class="title">活动管理</li>
+					<li url='pages/activity/all_activity.html'><a href="javascript:;">全部活动</a></li>
+					<li url='pages/activity/add_activity.html'><a href="javascript:;">添加活动</a></li>
+					<li class="title">模板管理</li>
+					<li url='pages/templet/templet_manage.html'><a href="javascript:;">全部模板</a></li>
+					<li url='pages/templet/create_templet.html'><a href="javascript:;">创建模板</a></li>
+					<li url='pages/templet/templet_type.html'><a href="javascript:;">模板类型</a></li>	
+					<!-- <li url='pages/activity/activity_details.html'><a href="javascript:;">查看活动详情</a></li>	 -->					
+				</ul>
+			</div>
+			<div class="container_right">
+				<div class="home_page">
+				<h3>欢迎使用社区灵通数据管理平台</h3>
+				<h4>
+					早上好，Panda！
+					<span>登录单位：国信灵通</span>
+					<span>上次登录时间：2013-12-26&nbsp;&nbsp;6:00</span>
+				</h4>
+				<div>系统架构</div>
+				<img src="images/home_page.png" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

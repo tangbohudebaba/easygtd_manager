@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>编辑活动</title>		
+		<link href="css/add_activity/add_activity.css" rel="stylesheet" />
+	</head>
+	<body>		
+		<ol class="breadcrumb">
+			<li>活动</li>
+			<li class="active">编辑活动</li>
+		</ol>
+        <form class="form-horizontal" role="form">
+		<input type="hidden" name="activity_detail_id">
+		<input type="hidden" name="type">
+            <div class="form-group">
+				<label for="inputUserName" class="col-sm-2 control-label">
+					选择模板
+				</label>
+				<div class="col-sm-4">
+					<select name="user_templet" class="form-control">
+						<option value="business_entity_manager">运动</option>
+						<option value="employee_of_nationsky">休闲</option>
+						<option value="employee_of_chinalife">娱乐</option>
+					</select>
+				</div>
+            </div>
+            <div class="activityContent">
+	            <div class="activityclass">
+	            	<ul id="split_class">
+	        
+	            	</ul>
+	            </div>
+	           <div class="tab">
+		            <div class="activityintro">
+						<ul>
+							<li  class="activityli">简介</li>
+							<li>建议</li>
+						</ul>
+					</div>
+					<div class="tab_content">
+						<div class="classsport">
+							“高尔夫”是荷兰文kolf的音译，意思是"在绿地和新鲜氧气中的美好生活"。高尔夫球是一种以棒击球入穴的球类运动。如今，高尔夫球运动已经成为贵族运动的代名词，但是它是由一群牧羊人发明的！“高尔夫”原意为“在绿地和新鲜空气中的美好生活”。它是一种把享受大自然乐趣、体育锻炼和游戏集于一身的运动。
+						</div>
+						<div>
+							“高尔夫”是荷兰文kolf的音译，意思是"在绿地和新鲜氧气中的美好生活"。高尔夫球是一种以棒击球入穴的球类运动。
+						</div>
+					</div>
+	          </div>
+       		</div>
+			<div class="form-group">
+				<label for="inputTell" class="col-sm-2 control-label">
+					所在小区
+				</label>
+				<div class="col-sm-4">
+					<select name="current_community" class="form-control">
+						<option value="business_entity_manager">雍和家园</option>
+						<option value="employee_of_nationsky">河畔丽景</option>
+						<option value="employee_of_chinalife">6666</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputName" class="col-sm-2 control-label">
+					活动名称
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="activity_name" id="inputName" placeholder="请输入活动名">
+				</div>
+				
+			</div>
+				<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					活动地址
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="address" id="inputAddress" placeholder="请输入活动地址">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					活动时间
+				</label>
+				<div class="col-sm-4 input-append date" id="dp3" data-date="" data-date-format="yyyy-mm-dd">
+					<input class="datepicker form-control" size="16" name="activity_time" type="text" value="">
+					<span class="add-on"><i><img src="images/calendar.jpg" /></i></span>
+				</div>
+			</div>
+        </form>
+		<button type="button" class="btn btn-primary" onClick="cancel_activity()">取消</button>
+		<button type="button" class="btn btn-primary" onClick="submit_edit_activity()">提交</button>
+	</body>
+	<script type="text/javascript">
+			$('.tab').changeTab();
+			$("#dp3").datepicker({
+				pickerPosition: "bottom-left",
+			});
+			var d = new Date(); 
+			var year=d.getFullYear();
+			var month=(d.getMonth() + 1)>10?(d.getMonth() + 1):'0'+(d.getMonth() + 1);
+			var day=d.getDate()>10?d.getDate():'0'+d.getDate();
+			$("[name='birthdate']").val(year+"-"+month+"-"+day);
+		
+		
+		//取消
+		function cancel_activity(){
+			$(".container_right").load('pages/activity/all_activity.html');
+		};
+	</script> 
+</html>

@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>添加用户</title>		
+		<link href="css/user/add_user.css" rel="stylesheet" />
+		<script type="text/javascript">
+			$(function (){
+				$("#dp3").datepicker({
+					pickerPosition: "bottom-left",
+				});
+				var d = new Date(); 
+				var year=d.getFullYear();
+				var month=(d.getMonth() + 1)>=10?(d.getMonth() + 1):'0'+(d.getMonth() + 1);
+				var day=d.getDate()>=10?d.getDate():'0'+d.getDate();
+				$("[name='birthdate']").val(year+"-"+month+"-"+day);
+			});
+			//取消
+			function cancel_common_user(){
+				$(".container_right").load('pages/common_user/common_all_user.html');
+			};
+		</script> 
+	</head>
+	<body>		
+		<ol class="breadcrumb">
+			<li>全部用户</li>
+			<li>普通用户</li>
+			<li class="active">添加用户</li>
+		</ol>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+				<label for="inputUserName" class="col-sm-2 control-label">
+					选择用户类型
+				</label>
+				<div class="col-sm-4">
+					<select name="employee_type" class="form-control">
+						<option value="business_entity_manager">国信管理员</option>
+						<option value="employee_of_nationsky">国信客服</option>
+						<option value="employee_of_chinalife">人寿社区代表</option>
+					</select>
+				</div>
+            </div>
+			<div id="server_area_div" style="display:none;" class="form-group" >
+				<label for="inputUserName" class="col-sm-2 control-label">
+					服务区域
+				</label>
+				<div class="col-sm-4">
+					服务区域信息还没有填充呢！
+				</div>
+            </div>
+			<div class="form-group">
+				<label for="inputTell" class="col-sm-2 control-label">
+					昵称
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="nickname" id="inputNickname" placeholder="点击输入用户昵称">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					真实姓名
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="name" id="inputName" placeholder="请输入真实姓名">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					出生日期
+				</label>
+				<div class="col-sm-4 input-append date" id="dp3" data-date="" data-date-format="yyyy-mm-dd">
+					<input class="datepicker form-control" size="16" name="birthdate" type="text" value="" readonly>
+					<span class="add-on"><i><img src="images/calendar.jpg" /></i></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					居住地址
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="address" id="inputAddress" placeholder="请输入现居住地址">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					手机号
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="cellphone" id="inputTel" placeholder="请输入正确的联系电话">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					邮件地址
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="email" id="inputMail" placeholder="请输入正确的邮件地址">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					简介
+				</label>
+				<div class="col-sm-4">
+					<textarea class="form-control" name="info" rows="3" id="textareaID"></textarea>
+				</div>
+			</div>
+        </form>
+		<button type="button" class="btn btn-primary" onClick="cancel_common_user();">取消</button>
+		<button type="button" class="btn btn-primary">提交</button>
+	</body>
+</html>

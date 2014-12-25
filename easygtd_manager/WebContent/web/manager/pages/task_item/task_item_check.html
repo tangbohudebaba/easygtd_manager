@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>查看待办</title>	
+		<link href="css/task_item/task_item_check.css" rel="stylesheet" />
+	</head>
+	<body>		
+		<ol class="breadcrumb">
+			<li>全部待办</li>
+			<li class="active" id="checked_name"></li>
+		</ol>
+		<button type="button" class="btn btn-primary" onClick="to_other_page('pages/task/all_pending.html')">返回上一级</button>
+		<button type="button" class="btn btn-primary" onClick="to_edit_task_item()">编辑</button>
+		<button type="button" class="btn btn-primary" onClick="delete_task_item()">删除</button>
+		<button type="button" class="btn btn-primary" onclick="submit_task_item()">现在发布</button>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">
+					标题
+				</label>
+				<div class="col-sm-10" id="titleDiv">
+				    
+				</div>
+				<input type="hidden" name="task_item_check_id">
+				<input type="hidden" name="task_name">
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					任务截止时间
+				</label>
+				<div class="col-sm-10"  id="dateDiv">
+				    
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					任务项
+				</label>
+				<div class="col-sm-10" id="contentDiv">
+				  
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					发布人
+				</label>
+				<div class="col-sm-10" id="submitdiv">
+				  
+				</div>
+			</div>		
+			<div class="people-left">			    	
+				任务执行人				
+			</div>	
+			<div class="table-right">
+				<table class="table table-hover table-condensed table-bordered">
+					<thead>
+						<tr>				
+							<th>执行人姓名</th>
+							<th>任务完成时间</th>
+						</tr>
+					</thead>		
+					<tbody id="task_item_check_tb">
+						
+					</tbody>
+				</table>
+			</div>		
+		</form>
+	</body>
+</html>

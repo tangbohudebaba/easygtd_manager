@@ -1,0 +1,38 @@
+h3{
+	float:left;
+	margin-top:12px;	
+}
+
+.btn-xs{
+	margin:10px 0;
+}
+
+table tbody td a:hover{
+	text-decoration: none;
+}
+
+.input-group{
+	width:50%;
+	float:right;
+}
+
+.search > .check_all {
+	background:#FFFFFF;
+	border:0;
+	color:#000;
+}
+
+.search > button:nth-child(1){
+	margin-left:-180px;
+}
+
+.breadcrumb {
+	padding-left:0;	
+	background:#fff;
+	/* width:180px; */
+	float:left;
+}
+
+.active {
+	font-size:20px;
+}

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>添加商户类型</title>		
+		<link href="css/business_category/add_business_type.css" rel="stylesheet" />
+		<link href="css/task_item/task_item_add.css" rel="stylesheet" />
+		<SCRIPT>
+			$(function(){
+			   $("[name='inputnameitem']").click(eventClick);
+			   function eventClick(){   
+					$('#write').append('<div class="col-sm-10" id="type_name"><label for="inputPassword3" class="col-sm-2 control-label"></label><div class="writeinclude"><input type="text" class="form-control"  name="inputnameitem" placeholder="点击添加下一个"><span class="glyphicon glyphicon-remove deletelist"  name="deletespan"></span></div></div>');
+					var taskitem=$($("[name='inputnameitem']")[$("[name='inputnameitem']").length-1]);
+					taskitem.click(eventClick);
+					var uu = taskitem.parent('.writeinclude');
+					$('.deletelist',uu).click(function(){
+						$(this).closest(".col-sm-10").remove();
+						taskitem.click(eventClick);
+					});
+			    };
+			});
+			function cancel_business_category(){
+				$(".container_right").load('pages/business_entity/business_entity_own.html');
+			};
+		</SCRIPT>
+	</head>
+	<body>
+        <ol class="breadcrumb">
+			<li>全部商户类型</li>
+			<li class="active">添加商户类型</li>
+		</ol>
+        <form class="form-horizontal" role="form">
+		    <div class="form-group" id="write">
+				<div class="col-sm-10" id="type_name">
+					<label for="inputPassword3" class="col-sm-2 control-label">
+					类型名
+					</label>
+				   <div class="writeinclude">
+						<input type="text" class="form-control" id="0" name="inputnameitem" placeholder="点击添加下一个">
+						<span class="glyphicon glyphicon-remove deletelist"  name="deletespan"></span>
+					</div>
+				</div>
+			</div>
+        </form>      
+		<button type="button" class="btn btn-primary" onClick="cancel_business_category()">取消</button>
+		<button type="button" class="btn btn-primary" onClick="submit_business_category()">提交</button>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>餐饮</title>		
+		<link href="css/business_category/check_business_type.css" rel="stylesheet" />
+	    <script type="text/javascript">
+	    		//显示列表
+		
+	    </script>
+	    <!-- 搜索商户 -->
+		<script id="search_business_show" type="text/html">
+			<% for (var i = 0;i<result.length;i++) {%>
+			 	<tr>
+				 	<td style='text-align:center'><label><input type='checkbox' name='subBox'></label></td>
+				 	<td>
+					 	<a href='#' onclick="to_business_entity_detail('<%=result[i].id%>','<%=result[i].business_category_id%>');">
+					 	<%=result[i].name%></a>
+				 	</td>
+		 			<td><%=result[i].business_category_id%></td>
+		 			<td>无数据</td>
+		 			<td><%=result[i].publicly_visible%></td>
+	 			</tr>
+			<%}%>
+		</script>
+	</head>
+	<body>
+		<h3 id="catering"></h3>	
+		<div class="row"></div>
+		<div class="search">
+			<button type="button" class="check_all" name="checkAllBut"></button>
+			<button type="button" class="check_all" name="submitBut">已发布（2）</button>
+			<button type="button" class="check_all" name="nosubmitBut">未发布（2）</button>
+			<input type="hidden" name="business_check_id">
+			<div class="input-group">
+				<input type="text" class="form-control" name="search_business_name">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="search_business_entity(1)">搜索</button>
+				</span>
+			</div>			
+		</div>	
+		<div class="row"></div>
+		<div class="Bulk Operations">
+			<div id="check_business_type_div" style="text-align:right;padding-bottom: 10px;"></div>
+		</div>
+		<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th style="text-align:center"><input type="checkbox" onClick="checkBox(this,'subBox')">
+					</th>	
+					<th>商户名</th>
+					<th>商户类型</th>
+					<th>创建人</th>
+					<th>发布状态</th>
+				</tr>
+			</thead>		
+			<tbody id="check_business_type_tb">
+			
+			</tbody>
+		</table>
+	</body>
+</html>

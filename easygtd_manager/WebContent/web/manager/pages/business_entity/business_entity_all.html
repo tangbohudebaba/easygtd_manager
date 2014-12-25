@@ -1,0 +1,58 @@
+﻿ <!DOCTYPE html>
+<html>
+	<head>
+		<title>全部商户</title>		
+		<link href="css/business_entity/business_entity_all.css" rel="stylesheet" />	
+		<script id="business_entity_list_temp" type="text/html">	
+			<%
+			var list=result?result:business_entities;
+			for ( var i=0 ; i<list.length ; i++){%>
+				<tr>
+					<td><label><input type='checkbox' name='entityID' categoryID='<%=list[i].business_category?list[i].business_category.id:list[i].business_category_id%>' entityID='<%=list[i].id%>'></label></td>
+					<td><a href='#' onclick="to_business_entity_info('all','<%=list[i].id%>','<%=list[i].name%>','<%=list[i].business_category?list[i].business_category.id:list[i].business_category_id%>');"><%=list[i].name%></a></td>
+					<td><%=list[i].business_category?list[i].business_category.name:list[i].business_category_id%></td>
+					<td><%=list[i].creator?list[i].creator:""%></td>
+					<td><%=formatDate(list[i].created_at)%></td>
+				</tr>
+			<%}%>
+		</script>
+		<script>
+			$(function(){
+				business_entity_list(1);//加载列表
+			});
+		</script>
+	</head>
+	<body>
+		<h3>全部商户</h3> 
+		<div class="search" style="margin-top:50px;">
+			<button type="button" class="check_all" name="checkAllBut"></button>
+			<button type="button" class="check_all" name="publishedBut"></button>
+			<button type="button" class="check_all" name="unpublishedBut"></button>
+			<div class="input-group">
+				<input type="text" class="form-control" name="search_value"/>
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="search_business_entity_list(1);">搜索</button>
+				</span>
+			</div>			 
+		</div>	
+		<div class="row"></div>
+		<div class="Bulk Operations">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary btn-sm" onClick="to_other_page('pages/business_entity/business_entity_add.html');">添加</button>
+			</div>	
+			<div id="business_entity_page_div" style="text-align:right;padding-bottom: 10px;"></div>
+		</div>
+		<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>				
+					<th style="text-align:center"><input type="checkbox" name="selectbox" onclick="checkBox(this,'entityID')"></th>				
+					<th>商户名</th>
+					<th>商户类型</th>
+					<th>创建人</th>
+					<th>创建时间</th>
+				</tr>
+			</thead>		
+			<tbody id="business_entity_list_tb"></tbody>
+		</table>	
+	</body>
+</html>

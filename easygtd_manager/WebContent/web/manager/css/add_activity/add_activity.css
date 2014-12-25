@@ -1,0 +1,112 @@
+.activityclass
+{
+	height: 300px;
+	width: 392px;
+	border: 1px solid black;
+	margin-left: 135px;
+	margin-bottom: 10px;
+	border-radius:5px;
+	float: left;
+	overflow-y:scroll;
+}
+.activityclass ul li
+{
+	height: 70px;
+	width: 80px;
+	border-radius:5px;
+	border: 1px solid black;
+	float: left;
+	margin-left: 35px;
+	margin-top: 25px;
+	position: relative;
+
+}
+.activityclass ul li span
+{
+	bottom: 0px;
+	padding-left: 15px;
+	position: absolute;
+	height: 20px;
+	width: 100%;
+	background: #ccc;
+}
+.activityintro
+{
+	width: 320px;
+}
+.activityContent
+{
+	height: 330px;
+	width: 80%;
+
+}
+.activityintro ul li
+{
+  float: left;
+  height:28px;
+  line-height:28px;
+  text-align:center;
+  padding:0px 5px;
+}
+.tab_content .classsport{
+	display:block;
+}
+.activityintro ul
+{
+	 border-bottom: 1px solid black;
+	 height:28px;
+}
+.tab {
+	width: 320px;
+	height: 100px;
+	margin:auto;
+	top:auto;
+	float: right;
+}
+.activityintro ul li.activityli{
+	background:#ccc;
+}
+.tab_content > div{
+	display:none;
+}
+.tab_content{
+	height:270px;
+}
+.tab_content div
+{
+   height:60px;
+}
+
+span.add-on {
+    position: absolute;
+    right: 10px;
+    top: 24%;
+    display:inline-block;
+}
+ span.add-on img
+ {
+ 	width: 20px;
+    height: 20px;
+ }
+.col-sm-2 {
+    margin-left: -80px;
+}
+.btn {
+    margin-right: 2%;
+    margin-top: 2%;
+}
+.form-group .col-sm-4 .timeclass
+{
+	width:200px !important;
+}
+.form-group .col-sm-4 .smallage
+{
+	border: 1px solid #ccc;
+	width: 100px;
+	height: 30px;
+	margin:0px 8px 0px 5px;
+
+}
+.reset_col_sm_4{
+	width:auto !important;
+}

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>编辑商户</title>	
+		<link href="css/business_entity/business_entity_redact.css" rel="stylesheet" />
+		<script type="text/javascript">
+	        $(function(){
+	            $(".icon").click(function(){
+	                $(".shop").show();
+	                return false;//关键是这里，阻止冒泡
+	            });
+	            $(".shop").click(function(){
+	                return false;
+	            });
+	            $(document).click(function(){
+	                $(".shop").hide();
+	            });
+				//加载商户类型
+				business_category_list('business_category_list_but');
+				//选择分类
+				$("#business_category_list_but").change(function (){
+					var tex=$('#business_category_list_but option:selected').text();//选中的文本
+					var val=$('#business_category_list_but option:selected').val();//选中的值
+					$("[name='business_category_name']").val(tex);
+					$("[name='business_category_id']").val(val);
+					$(".shop").hide();
+				});
+	        })
+	    </script>
+	</head>
+	<body>		
+		<ol class="breadcrumb">
+			<li>全部商户</li>
+			<li id="breadcrumb_li"></li>
+			<li class="active">编辑</li>
+		</ol>
+		<form class="form-horizontal" role="form">
+			<input type="hidden" name="id">
+			<input type="hidden" name="business_name">
+			<input type="hidden" name="type"><!--区分是查询的所有的还是关注的 别删了 -->
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label" style="margin-right:15px;">
+					选择一个分类
+				</label>
+			    <input type="text" class="icon form-control"  name="business_category_name" autocomplete="off" placeholder="选择分类"/> 
+			    <input type="hidden" name="business_category_id" />
+				<span type="text" class="icon caret"></span>
+			    <div class="shop" >
+			        <input type="text" name="seach_value" id="chose" placeholder="搜索" onkeyup="search_Business_category();" onfocus="if(this.value=='输入关键词，回车搜索全国设计素材资源'){this.value='';}"/>   
+			        <select size="5" id="business_category_list_but" ></select>
+			    </div>	
+			</div> 	
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">
+					店名
+				</label>
+				<div class="col-sm-10"> 
+				    <input type="text" class="form-control" name="name" id="inputEmail3" >
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					地址
+				</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="address" id="inputPassword3" >
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					联系电话
+				</label>
+				<div class="col-sm-10">
+				    <input type="text" class="form-control" name="phone" id="inputPassword3" >
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					简介
+				</label>
+				<div class="col-sm-10">
+				    <input type="text" class="form-control" name="intro" id="inputPassword3" >
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">商户地标</label>
+				<div class="col-sm-5 map">
+				</div>
+			</div>
+			<div class="footer_button">
+				<button type="button" class="btn btn-primary" onClick="business_entity_redact_back();">取消</button>
+				<button type="button" class="btn btn-primary" onClick="update_business_entity();">保存</button>
+			</div>
+		</form>
+	</body>
+</html>

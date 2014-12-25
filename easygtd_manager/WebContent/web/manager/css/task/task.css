@@ -1,0 +1,36 @@
+h3{
+	float:left;
+	margin-top:12px;	
+}
+
+.btn-xs{
+	margin:16px;
+}
+
+table tbody td a:hover{
+	text-decoration: none;
+}
+
+.input-group{
+	width:50%;
+	float:right;
+}
+
+.search > .check_all {
+	background:#FFFFFF;
+	border:0;
+	color:#000;
+}
+
+.table > thead > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td , tbody > tr > td > label > input {
+    vertical-align: middle;
+}	
+	
+tbody > tr > td:nth-child(1) {
+	width:20px;
+	text-align:center;
+}
+
+tbody > tr > td {
+	width:130px;
+}

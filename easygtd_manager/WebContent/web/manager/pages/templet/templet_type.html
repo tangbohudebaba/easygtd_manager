@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>模板类型</title>		
+		<link href="css/user/all_user.css" rel="stylesheet" />
+		<SCRIPT>
+			//添加
+			function into_create_templet_type() {
+				$(".container_right").load('pages/templet/create_templet_type.html');
+			}
+		</SCRIPT>
+	</head>
+	<body>
+		<h3>模板类型</h3>
+		<div class="search" style="margin-top:50px;">
+			<button type="button" class="check_all" onclick="to_other_page('pages/templet/templet_manage.html');">所有模版（3）</button>
+			<button type="button" class="check_all active" onclick="to_other_page('pages/templet/templet_type.html');">模版类型（3）</button>
+			<div class="input-group">
+				<input type="text" class="form-control" name="search_value">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="search_user('all_user_list_tb','all_user_page_div');">搜索</button>
+				</span>
+			</div>			
+		</div>
+		<div class="row"></div>
+		<div class="Bulk Operations">
+			<button type="button" class="btn btn-primary btn-sm" onClick="into_create_templet_type()">添加</button>	
+			<div id="templet_type_page_div" style="text-align:right;padding-bottom: 10px;"></div>
+		</div>
+		<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th></th>
+					<th>模板类型</th>
+					<th>简介</th>
+					<th>创建时间</th>
+				</tr>
+			</thead>
+			<tbody id="templet_type__tb">
+				
+			</tbody>		
+		</table>
+	</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>创建模板</title>		
+		<link href="css/creat_templet/creat_templet.css" rel="stylesheet" /> 
+		<script type="text/javascript">
+			$(function()
+			{
+			//给material 添加click事件
+			$("[name='material']").click(eventClick);
+			});
+		</script>
+	</head>
+	<body>		
+		<ol class="breadcrumb">
+			<li>全部模板</li>
+			<li class="active">创建模板</li>
+		</ol>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+				<label for="inputUserName" class="col-sm-2 control-label">
+					模板头图
+				</label>
+				<div class="col-sm-4" id="choose_photo">
+					<img src="images/head.jpg" id="imghead">
+				</div>
+				<input type="file"  onchange="previewImage(this)" class="changefile">
+            </div>
+			<div class="form-group">
+				<label for="inputTell" class="col-sm-2 control-label">
+					模板名称
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="templet_name" id="inputName" placeholder="请输入模板名称">
+				</div>
+			</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					模板类型
+				</label>
+				<div class="col-sm-4">
+					<select name="templet_type" class="form-control">
+						<option value="1">运动</option>
+						<option value="2">休闲</option>
+						<option value="3">娱乐</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					人数限制
+				</label>
+				<div class="col-sm-4">
+					<select name="seat" class="form-control">
+						<option value="10">10</option>
+						<option value="30">30</option>
+						<option value="60">60</option>
+					</select>
+				</div>
+			</div>
+				<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					适宜年龄
+				</label>
+				<div class="col-sm-4">
+					<input type="text"  id="inputage" name="smallage" class="smallage">至<input type="text" name="maxage"  id="inputage" class="smallage">岁
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					场地建议
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="content" id="inputName" placeholder="请输入场地建议">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					活动物料
+				</label>
+				<div class="col-sm-10" id="write">
+				   <div class="divinclude">
+						<input type="text" class="form-control" id="inputMaterial" name="material" placeholder="请输入活动物料">
+						<span class="glyphicon glyphicon-remove deletelist"  name="taskspan"></span>
+						<span class="glyphicon glyphicon-th-list addlist"  name="addspan"></span>
+					</div>
+				</div>
+			</div>
+				<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					简介
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="intro" id="inputName">
+				</div>
+			</div>
+        </form>
+		<button type="button" class="btn btn-primary" onClick="to_other_page('pages/templet/templet_manage.html')">取消</button>
+		<button type="button" class="btn btn-primary" onClick="submit_temple()">提交</button>
+	</body>
+</html>

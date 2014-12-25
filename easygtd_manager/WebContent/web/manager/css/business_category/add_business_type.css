@@ -1,0 +1,32 @@
+.col-sm-2 {
+   	width:9%;
+} 
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.breadcrumb {
+	padding-left:0;	
+	background:#fff;
+}
+
+.active {
+	font-size:20px;
+}
+
+.btn{
+	margin-right:2%;
+	margin-top:2%;
+}
+
+.writeinclude
+{
+	overflow:hidden;
+	margin-bottom:15px;
+	position:relative;
+	z-index:1;
+}
+.form-control {
+    width: 294px !important;
+}

@@ -1,0 +1,75 @@
+ul,li  {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.form-horizontal {
+	margin-top:20px;
+}
+
+.col-sm-2 {
+    width:11.5%;
+} 
+
+.col-sm-5{
+	margin-top:7px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.btn {
+	margin-right:2%;
+}
+
+.form-group .map {
+	width:340px;
+	height:199px;
+	background-color:#D7D7D7;
+	border:1px solid #BABABA;
+	margin-left:15px;	
+}
+
+.breadcrumb {
+	padding-left:0;	
+	background:#fff;
+}
+
+.active {
+	font-size:20px;
+}
+.hide {
+	display:none;
+}
+.error_msg {
+	border: 1px solid rgb(204, 204, 204); 
+	height: 220px; 
+	width: 500px;
+	position:absolute;
+	top:130px;
+	left:500px;
+	background:#fff;
+}
+.error_msg .content {
+	height:30px;
+	border:0px;
+}
+.error_msg .content a {
+	float:right;
+	margin-right:20px;
+}
+.error_msg  textarea {
+	border:1px solid #ccc;
+	width:90%;
+	height:140px;
+	margin-left:25px;
+	resize:none;
+	border-radius:7px;
+}
+.error_msg  .but {
+	width:200px;
+	float:right;
+	margin-top:8px;
+}

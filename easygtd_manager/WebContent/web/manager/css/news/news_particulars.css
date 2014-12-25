@@ -1,0 +1,62 @@
+.form-horizontal {
+	margin-top:20px;
+}
+
+.col-sm-2 {
+    width:11.5%;
+} 
+
+.col-sm-5{
+	margin-top:7px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.button {
+	margin-top:-10px;
+}
+
+.button > button:nth-child(1) {
+	margin-right:5%;
+}
+
+.button > button:nth-child(2), .button > button:nth-child(3) {
+	background:#333333;
+	border:1px solid #333333;
+	margin-right:-8px;
+	width:80px;
+}
+
+.button > button:nth-child(4) {
+	margin: 0 1.5% 0 4%;
+	background:#666666;
+	border:1px solid #666666;
+}
+
+.button > button:nth-child(6) {
+	float:right;
+	margin: 0 3% 0 1.5%;
+}
+
+.button > button:nth-child(7) {
+	float:right;
+}
+
+.form-group .map {
+	width:340px;
+	height:199px;
+	background-color:#D7D7D7;
+	border:1px solid #BABABA;
+	margin-left:15px;	
+}
+
+.breadcrumb {
+	padding-left:0;	
+	background:#fff;
+}
+
+.active {
+	font-size:20px;
+}

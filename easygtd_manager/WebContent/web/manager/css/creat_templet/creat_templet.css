@@ -1,0 +1,106 @@
+.form-group .col-sm-4 textarea
+{
+	width: 360px;
+	height: 150px;
+	border: 1px solid #ccc;
+}
+.form-group .col-sm-4 .smallage
+{
+	border: 1px solid #ccc;
+	width: 40px;
+	height: 30px;
+	margin:0px 8px 0px 5px;
+
+}
+ul,li  {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.breadcrumb{
+	padding-left:0;
+	background:none;
+}
+.search > .check_all {
+	background:#FFFFFF;
+	border:0;
+	color:#000;
+	margin-right: 50px;
+}
+.search > .active {
+	border-bottom: 2px solid #0099FF;
+}
+.breadcrumb .active {
+	font-size:20px;	
+}
+
+.col-sm-10{
+	padding-top:7px;
+}
+
+.form-group {
+	margin-top:18px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.col-sm-2 {
+	width: 10.5%;
+}
+
+.col-sm-offset-2 {
+	margin-left: 0;
+}
+
+.pull-left {
+	margin-top:35px;
+}
+
+.people-left{
+	float:left;
+	width:10.5%;
+	font-weight: bold;
+}
+
+.table-right{
+	width:60%;
+	float:left;
+}
+
+.btn{
+	margin-right:2%;
+}
+.form-group .changefile{
+	background-image: images/u219.png;
+	
+}
+.addlist
+{ 
+	left: 380px;
+ 	width:15px;  
+ 	height:15px; 
+}
+.deletelist
+{ 
+	left: 360px;
+}
+.divinclude
+{
+	position:relative;
+	margin-bottom:15px;
+	width:450px;
+	z-index:1;
+}
+.form-group .col-sm-10 .form-control {
+	width:354px;
+	border-color:#B2B2B2;
+}
+.glyphicon {
+	color:#b1b1b1;
+	position: absolute;
+	top: 12px;
+	
+}

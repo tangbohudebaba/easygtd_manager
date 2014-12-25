@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>编辑小区信息</title>		
+		<link href="css/community_center/community_center_redact.css" rel="stylesheet" />
+	</head>
+	<body>
+		<ol class="breadcrumb">
+			<li>全部小区</li>
+			<li id="active_li"></li>
+			<li>小区信息</li>
+			<li class="active">编辑</li>
+		</ol>
+        <form class="form-horizontal" role="form">
+			<input type="hidden" name="community_center_id"><!--小区ID-->
+			<input type="hidden" name="community_center_name"><!--小区名称-->
+			<input type="hidden" name="type">
+            <div class="form-group">
+				<label for="inputTell" class="col-sm-2 control-label">小区名</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="name" id="inputTell" />
+				</div>
+            </div>
+            <div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">地址</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="address" id="inputAddress" />
+				</div>
+            </div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">物业联系电话</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="estatePhone" id="inputAddress"/>
+				</div>
+            </div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">为小区创建地标</label>
+				<div class="col-sm-5 map">
+				</div>
+			</div>
+			<button type="button" class="btn btn-primary" onClick="to_show_community_center()">取消</button>
+			<button type="button" class="btn btn-primary" onclick="editor_community_center();">提交</button>
+        </form>
+	</body>
+</html>

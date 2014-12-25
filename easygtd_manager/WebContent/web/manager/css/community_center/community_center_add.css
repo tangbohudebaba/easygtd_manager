@@ -1,0 +1,39 @@
+ul,li  {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.breadcrumb {
+	padding-left:0;	
+	background:#fff;
+}
+
+.active {
+	font-size:20px;
+}
+
+.form-group .col-sm-10 {
+	float:left;
+}
+
+.col-sm-2 {
+    width:12%;
+} 
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.btn{
+	margin-right:2%;
+	margin-top:2%;
+}
+
+.form-group .map {
+	width:340px;
+	height:199px;
+	background-color:#D7D7D7;
+	border:1px solid #BABABA;
+	margin-left:15px;
+}

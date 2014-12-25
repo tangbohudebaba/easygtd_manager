@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全部小区</title>		
+		<link href="css/community_center/community_center_all.css" rel="stylesheet" />
+		<!-- 列表模版 -->
+		<script id="community_center_list_temp" type="text/html">
+			<% 
+			var list=result?result:community_centers;
+			for (var i=0;i<list.length;i++) {%>
+				<tr>
+					<td><label><input type='checkbox' name='centerID' value='<%=list[i].id%>'></label></td>
+					<td><a href='#' onclick="to_show_community_center('all','<%=list[i].id%>','<%=list[i].name%>');"><%=list[i].name%></a></td>
+					<td><%=list[i].address%></td>
+					<td><%=formatDate(list[i].created_at)%></td>
+				</tr>
+			<%}%>	
+		</script>
+		<script type="text/javascript">
+			$(function (){
+				community_center_list(1);
+			});
+		</script>
+	</head>
+	<body>
+		<h3>全部小区</h3>
+		<div class="search" style="margin-top:50px;">
+			<button type="button" class="check_all" name="checkAllBut"></button>
+			<button type="button" class="check_all" name="publishedBut"></button>
+			<button type="button" class="check_all" name="unpublishedBut"></button>
+			<div class="input-group">
+				<input type="text" class="form-control" name="search_value"/>
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="search_community_center(1);">搜索</button>
+				</span>
+			</div>
+		</div>
+		<div class="row"></div>
+		<div class="Bulk Operations">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary btn-sm" onClick="to_other_page('pages/community_center/community_center_add.html');">添加</button>
+			</div>	
+			<div id="community_center_page_div" style="text-align:right;padding-bottom: 10px;"></div>
+		</div>
+		<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th style="text-align:center"><input type="checkbox" onclick="checkBox(this,'centerID')"></th>						 
+					<th>社区名</th>
+					<th>地址</th>
+					<th>创建时间</th>
+				</tr>
+			</thead>		
+			<tbody id="community_center_list_tab"></tbody>
+		</table>
+	</body>
+</html>

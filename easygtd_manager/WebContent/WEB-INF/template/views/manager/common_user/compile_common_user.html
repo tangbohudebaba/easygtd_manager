@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>编辑用户</title>		
+		<link href="css/user/add_user.css" rel="stylesheet" />
+		<script type="text/javascript">
+			$(function (){
+				$("#dp3").datepicker({
+					pickerPosition: "bottom-left",
+				});			
+			});
+			//取消
+			function cancel_update_user(){
+				$(".container_right").load('pages/common_user/check_common_user.html');
+			}
+		</script> 
+	</head>
+	<body>		
+		<ol class="breadcrumb">
+			<li>全部用户</li>
+			<li id="breadcrumb_li">张三</li>
+			<li class="active">编辑</li>
+		</ol>
+        <form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputTell" class="col-sm-2 control-label">
+					昵称
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" value="张三" id="inputNickname" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					真实姓名
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" value="张大三" name="name" id="inputName" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					性别
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" value="男" name="name" id="inputName" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					出生日期
+				</label>
+				<div class="col-sm-4 input-append date" id="dp3" data-date="" data-date-format="yyyy-mm-dd">
+					<input class="datepicker form-control" size="16" name="birthdate" type="text" value="1982-12-12" readonly />
+					<span class="add-on">
+						<i><img src="images/calendar.jpg" /></i>
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					常用地区
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="address" id="inputAddress" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					联系电话
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="cellphone" id="inputTel" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-sm-2 control-label">
+					邮件地址
+				</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="email" id="inputMail"/>
+				</div>
+			</div>
+			<div class="form-group">			
+				<label for="inputAddress" class="col-sm-2 control-label">
+					注册时间
+				</label>
+				<div class="col-sm-4">
+					<textarea class="form-control" rows="3" name="info" id="textareaID"></textarea>
+				</div>
+			</div>
+        </form>
+		<button type="button" class="btn btn-primary" onClick="cancel_update_user();">取消</button>
+		<button type="button" class="btn btn-primary">保存</button>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>创建模板类型</title>		
+		<script type="text/javascript">
+			$(function(){
+			    $("[name='typeName']").click(eventClick);
+			   function eventClick(){   
+					$('#write').append('<div class="writeinclude"><label for="inputUserName" class="col-sm-2 control-label">#1</label><div class="col-sm-5"><input type="text" class="form-control" id="inputUserName" name="typeName" placeholder="请输入新类型名称" /></div></div>');
+					$(this).unbind('click');
+					var taskitem=$($("[name='typeName']")[$("[name='typeName']").length-1]);
+					taskitem.click(eventClick);
+			   };
+			});
+			
+			//取消
+			function cancel_templet_type(){
+				$(".container_right").load('pages/templet/templet_type.html');
+			};
+		</script> 
+	</head>
+	<body>		
+		<ol class="breadcrumb">
+			<li>全部模板</li>
+			<li class="active">模板类型</li>
+			<li class="active">创建模板类型</li>
+		</ol>
+        <form class="form-horizontal" role="form">
+		    <div class="form-group" id="write">
+			  <div class="writeinclude">
+				<label for="inputUserName" class="col-sm-2 control-label">类型名</label>
+				<div class="col-sm-5">
+				    <input type="text" class="form-control" id="inputUserName" name="typeName" placeholder="请输入新类型名称" />
+				</div>
+			  </div>
+			</div>
+        </form>      
+		<button type="button" class="btn btn-primary" onClick="cancel_templet_type()">取消</button>
+		<button type="button" class="btn btn-primary">提交</button>
+	</body>
+</html>
