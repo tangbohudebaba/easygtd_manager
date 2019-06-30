@@ -11,19 +11,19 @@
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>http://192.168.1.199:8080/down/TestApp1.ipa</string>
+                    <string>http://192.168.1.21:8080/down/TestApp1.ipa</string>
                 </dict>
             </array>
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-    <string>请填上你的开发者证书用户名</string>
+    <string>简易分发</string>
                 <key>bundle-version</key>
                 <string>1.0</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>请填上标题</string>
+                <string>TestApp</string>
             </dict>
         </dict>
     </array>
