@@ -11,7 +11,7 @@
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>liuchang.iok.la:36709/ad/download/TestApp1.ipa</string>
+                    <string>http://liuchang.iok.la:36709/ad/download/TestApp1.ipa</string>
                 </dict>
             </array>
             <key>metadata</key>
